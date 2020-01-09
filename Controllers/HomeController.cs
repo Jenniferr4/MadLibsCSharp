@@ -11,14 +11,18 @@ namespace MadLibsCSharp.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/hello")]
-        public string Hello() { return "Hello friend!"; }
 
-        [Route("/goodbye")]
-        public string Goodbye() { return "Goodbye friend."; }
+        [Route("/")]
+        public IActionResult Index(string color, string verb, string adjective, string noun)
+        {
+            madLibsWordsViewModel myMadLibs = new madLibsWordsViewModel();
+            myMadLibs.Color = color;
+            myMadLibs.Verb = verb;
+            myMadLibs.Adjective = adjective;
+            myMadLibs.Noun = noun;
 
-        [Route("/form")]
-        public IActionResult Form() { return View(); }
+            return View(myMadLibs);
+        }
 
         [Route("/body")]
         public IActionResult Body(string color, string verb, string adjective, string noun)
@@ -31,18 +35,6 @@ namespace MadLibsCSharp.Controllers
             return View(myMadLibs);
         }
 
-
-        [Route("/")]
-        public IActionResult Index(string color, string verb, string adjective, string noun)
-        {
-            madLibsWordsViewModel myMadLibs = new madLibsWordsViewModel();
-            myMadLibs.Color = color;
-            myMadLibs.Verb = verb;
-            myMadLibs.Adjective = adjective;
-            myMadLibs.Noun = noun;
-            
-            return View(myMadLibs);
-        }
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
