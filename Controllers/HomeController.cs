@@ -11,27 +11,52 @@ namespace MadLibsCSharp.Controllers
 {
     public class HomeController : Controller
     {
-
         [Route("/")]
-        public IActionResult Index(string color, string verb, string adjective, string noun)
+        public IActionResult Index(string Adjective, string Verbing1, string BookChar1, 
+                                   string Verbing2, string BookChar2, 
+                                   string HomeT, string BookChar3, string Title, string Name1,
+                                   string State, string Name2, string Onomonopia, string PastVerb, int Number)
         {
             madLibsWordsViewModel myMadLibs = new madLibsWordsViewModel();
-            myMadLibs.Color = color;
-            myMadLibs.Verb = verb;
-            myMadLibs.Adjective = adjective;
-            myMadLibs.Noun = noun;
+            myMadLibs.Adjective = Adjective;
+            myMadLibs.Verb_ing1 = Verbing1;
+            myMadLibs.BookChar1 = BookChar1;
+            myMadLibs.Verb_ing2 = Verbing2;
+            myMadLibs.BookChar2 = BookChar2;
+            myMadLibs.HomeTown = HomeT;
+            myMadLibs.BookChar2 = BookChar3;
+            myMadLibs.Title = Title;
+            myMadLibs.Name1 = Name1;
+            myMadLibs.State = State;
+            myMadLibs.Name2 = Name2;
+            myMadLibs.Onomonopia = Onomonopia;
+            myMadLibs.PastVerb = PastVerb;
+            myMadLibs.Number = Number;
 
             return View(myMadLibs);
         }
 
         [Route("/body")]
-        public IActionResult Body(string color, string verb, string adjective, string noun)
+        public IActionResult Body(string Adjective, string Verbing1, string BookChar1,
+                                   string Verbing2, string BookChar2,
+                                   string HomeT, string BookChar3, string Title, string Name1,
+                                   string State, string Name2, string Onomonopia, string PastVerb, int Number)
         {
             madLibsWordsViewModel myMadLibs = new madLibsWordsViewModel();
-            myMadLibs.Color = color;
-            myMadLibs.Verb = verb;
-            myMadLibs.Adjective = adjective;
-            myMadLibs.Noun = noun;
+            myMadLibs.Adjective = Adjective;
+            myMadLibs.Verb_ing1 = Verbing1;
+            myMadLibs.BookChar1 = BookChar1;
+            myMadLibs.Verb_ing2 = Verbing2;
+            myMadLibs.BookChar2 = BookChar2;
+            myMadLibs.HomeTown = HomeT;
+            myMadLibs.BookChar3 = BookChar3;
+            myMadLibs.Title = Title;
+            myMadLibs.Name1 = Name1;
+            myMadLibs.State = State;
+            myMadLibs.Name2 = Name2;
+            myMadLibs.Onomonopia = Onomonopia;
+            myMadLibs.PastVerb = PastVerb;
+            myMadLibs.Number = Number;
             return View(myMadLibs);
         }
 
