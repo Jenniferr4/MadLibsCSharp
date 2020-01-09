@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Class.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Body.cshtml" />
+    <Content Remove="Views\Home\Form.cshtml" />
+    <Content Remove="Views\Home\MadLib.cshtml" />
+  </ItemGroup>
+
+
+
+</Project>
